@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Linkedin, Twitter, Facebook } from 'lucide-react';
 
 const Footer = () => {
@@ -12,13 +13,13 @@ const Footer = () => {
               Guiding businesses to achieve their full potential through expert consulting in technology, business, finance, and leadership.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[#D4AF37]">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37]">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#D4AF37]">
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37]">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#D4AF37]">
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37]">
                 <Facebook className="h-6 w-6" />
               </a>
             </div>
@@ -27,26 +28,29 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#D4AF37]">About Us</a></li>
-              <li><a href="#" className="hover:text-[#D4AF37]">Services</a></li>
-              <li><a href="#" className="hover:text-[#D4AF37]">Our Team</a></li>
-              <li><a href="#" className="hover:text-[#D4AF37]">Contact</a></li>
+              <li><Link to="/about" className="hover:text-[#D4AF37]">About Us</Link></li>
+              <li><Link to="/technology" className="hover:text-[#D4AF37]">Technology</Link></li>
+              <li><Link to="/business" className="hover:text-[#D4AF37]">Business</Link></li>
+              <li><Link to="/finance" className="hover:text-[#D4AF37]">Finance</Link></li>
+              <li><Link to="/leadership" className="hover:text-[#D4AF37]">Leadership</Link></li>
+              <li><Link to="/team" className="hover:text-[#D4AF37]">Our Team</Link></li>
+              <li><Link to="/contact" className="hover:text-[#D4AF37]">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#D4AF37]">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[#D4AF37]">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-[#D4AF37]">Cookie Policy</a></li>
+              <li><Link to="/privacy-policy" className="hover:text-[#D4AF37]">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="hover:text-[#D4AF37]">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-[#D4AF37]">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Golden Apex Advisory. All rights reserved.
+            {new Date().getFullYear()} Golden Apex Advisory. All rights reserved.
           </p>
         </div>
       </div>
