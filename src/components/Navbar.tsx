@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,9 +61,6 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <div className="flex items-center">
-              <Search className="h-5 w-5 text-gray-400 cursor-pointer hover:text-[#D4AF37]" />
-            </div>
           </div>
 
           <div className="md:hidden flex items-center">
